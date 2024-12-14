@@ -1,0 +1,19 @@
+The solution involves understanding specificity and avoiding unnecessary use of `!important`. If the desired style for the paragraph should be green, keep the current selector and remove the `!important` declaration from the parent selector.
+
+Here's the corrected CSS:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.child p {
+  color: green;
+}
+```
+
+By removing the `!important` and instead managing the style using the typical CSS cascade, the specificity is handled naturally, and the paragraph text is styled in green correctly.
