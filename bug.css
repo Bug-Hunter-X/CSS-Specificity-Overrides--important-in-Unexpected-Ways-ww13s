@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to specificity and inheritance:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red !important;
+}
+
+.child p {
+  color: green;
+}
+```
+
+In this example, the paragraph element within the `.child` class inherits the `color: red !important;` from its parent.  However, even though `!important` generally overrides all other styles, specificity still comes into play. The `color: green;` declaration in `.child p` has higher specificity because it's a more specific selector. Therefore, the paragraph text will be green, not red. This illustrates a situation where `!important` isn't the final word.
